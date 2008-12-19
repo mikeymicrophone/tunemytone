@@ -1,0 +1,28 @@
+<h1>Editing element</h1>
+
+<% form_for(@element) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :specification_type %><br />
+    <%= f.text_field :specification_type %>
+  </p>
+  <p>
+    <%= f.label :specification_id %><br />
+    <%= f.text_field :specification_id %>
+  </p>
+  <p>
+    <%= f.label :configuration %><br />
+    <%= f.text_field :configuration %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @element %> |
+<%= link_to 'Back', elements_path %>

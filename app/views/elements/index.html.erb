@@ -1,0 +1,26 @@
+<h1>Listing elements</h1>
+
+<table>
+  <tr>
+    <th>Specification type</th>
+    <th>Specification</th>
+    <th>Configuration</th>
+    <th>User</th>
+  </tr>
+
+<% for element in @elements %>
+  <tr>
+    <td><%=h element.specification_type %></td>
+    <td><%=h element.specification_id %></td>
+    <td><%=h element.configuration %></td>
+    <td><%=h element.user %></td>
+    <td><%= link_to 'Show', element %></td>
+    <td><%= link_to 'Edit', edit_element_path(element) %></td>
+    <td><%= link_to 'Destroy', element, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New element', new_element_path %>

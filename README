@@ -1,0 +1,6 @@
+tune my tone is an app that allows you to store configurations for your pedals and other instruments.  you can remember all the details of your favorite combinations and ask for help to match sounds in songs you like.
+
+instruments and effects can have any number of inputs, outputs, and knobs.  create a configuration by using connections to connect outputs to inputs, and settings to indicate where each knob should be.  each connection and setting can be connected to the configuration with an element object.
+
+then, configurations can be nested within each other.  so, one configuration could contain three settings that specified the values of the three knobs on a reverb pedal, another configuration could contain one setting of the tone knob on a Gibson guitar and two settings of the knobs on a distortion pedal, and a connection object with the output of the guitar connected to the input of the pedal, and a third configuration could contain those two configurations and a connection object connecting the output of the distortion pedal to the input of the reverb pedal.
+

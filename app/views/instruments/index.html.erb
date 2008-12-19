@@ -1,0 +1,24 @@
+<h1>Listing instruments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Belongs to</th>
+    <th>Belongs to</th>
+  </tr>
+
+<% for instrument in @instruments %>
+  <tr>
+    <td><%=h instrument.name %></td>
+    <td><%=h instrument.belongs_to %></td>
+    <td><%=h instrument.belongs_to %></td>
+    <td><%= link_to 'Show', instrument %></td>
+    <td><%= link_to 'Edit', edit_instrument_path(instrument) %></td>
+    <td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New instrument', new_instrument_path %>

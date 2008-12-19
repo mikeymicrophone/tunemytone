@@ -1,0 +1,28 @@
+<h1>Editing output</h1>
+
+<% form_for(@output) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :host_type %><br />
+    <%= f.text_field :host_type %>
+  </p>
+  <p>
+    <%= f.label :host_id %><br />
+    <%= f.text_field :host_id %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @output %> |
+<%= link_to 'Back', outputs_path %>

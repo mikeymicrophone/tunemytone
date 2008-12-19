@@ -1,0 +1,23 @@
+<p>
+  <b>Specification type:</b>
+  <%=h @element.specification_type %>
+</p>
+
+<p>
+  <b>Specification:</b>
+  <%=h @element.specification_id %>
+</p>
+
+<p>
+  <b>Configuration:</b>
+  <%=h @element.configuration %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @element.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_element_path(@element) %> |
+<%= link_to 'Back', elements_path %>

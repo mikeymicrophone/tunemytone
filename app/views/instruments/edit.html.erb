@@ -1,0 +1,24 @@
+<h1>Editing instrument</h1>
+
+<% form_for(@instrument) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :belongs_to %><br />
+    <%= f.text_field :belongs_to %>
+  </p>
+  <p>
+    <%= f.label :belongs_to %><br />
+    <%= f.text_field :belongs_to %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @instrument %> |
+<%= link_to 'Back', instruments_path %>

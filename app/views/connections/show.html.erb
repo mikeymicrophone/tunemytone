@@ -1,0 +1,18 @@
+<p>
+  <b>Output:</b>
+  <%=h @connection.output %>
+</p>
+
+<p>
+  <b>Input:</b>
+  <%=h @connection.input %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @connection.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>

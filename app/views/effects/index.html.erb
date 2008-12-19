@@ -1,0 +1,24 @@
+<h1>Listing effects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>User</th>
+  </tr>
+
+<% for effect in @effects %>
+  <tr>
+    <td><%=h effect.name %></td>
+    <td><%=h effect.brand %></td>
+    <td><%=h effect.user %></td>
+    <td><%= link_to 'Show', effect %></td>
+    <td><%= link_to 'Edit', edit_effect_path(effect) %></td>
+    <td><%= link_to 'Destroy', effect, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New effect', new_effect_path %>

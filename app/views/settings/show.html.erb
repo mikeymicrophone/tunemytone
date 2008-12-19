@@ -1,0 +1,18 @@
+<p>
+  <b>Knob:</b>
+  <%=h @setting.knob %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @setting.user %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @setting.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>

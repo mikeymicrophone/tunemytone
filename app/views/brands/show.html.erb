@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @brand.name %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%=h @brand.homepage %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @brand.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
