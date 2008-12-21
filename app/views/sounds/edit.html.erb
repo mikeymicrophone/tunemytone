@@ -1,0 +1,28 @@
+<h1>Editing sound</h1>
+
+<% form_for(@sound) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :configuration %><br />
+    <%= f.text_field :configuration %>
+  </p>
+  <p>
+    <%= f.label :example_type %><br />
+    <%= f.text_field :example_type %>
+  </p>
+  <p>
+    <%= f.label :example_id %><br />
+    <%= f.text_field :example_id %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sound %> |
+<%= link_to 'Back', sounds_path %>

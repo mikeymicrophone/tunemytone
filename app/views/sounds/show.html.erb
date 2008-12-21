@@ -1,0 +1,23 @@
+<p>
+  <b>Configuration:</b>
+  <%=h @sound.configuration %>
+</p>
+
+<p>
+  <b>Example type:</b>
+  <%=h @sound.example_type %>
+</p>
+
+<p>
+  <b>Example:</b>
+  <%=h @sound.example_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @sound.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_sound_path(@sound) %> |
+<%= link_to 'Back', sounds_path %>

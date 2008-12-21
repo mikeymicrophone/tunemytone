@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :sounds
+
   map.resources :participations
 
   map.resources :recordings
