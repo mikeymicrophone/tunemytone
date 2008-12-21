@@ -8,12 +8,8 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :belongs_to %><br />
-    <%= f.text_field :belongs_to %>
-  </p>
-  <p>
-    <%= f.label :belongs_to %><br />
-    <%= f.text_field :belongs_to %>
+    <%= f.label :brand_id %><br />
+    <%= f.select :brand_id, Brand.map_name_and_id %>
   </p>
   <p>
     <%= f.submit "Update" %>

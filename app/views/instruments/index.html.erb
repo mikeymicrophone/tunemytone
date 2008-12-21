@@ -10,8 +10,8 @@
 <% for instrument in @instruments %>
   <tr>
     <td><%=h instrument.name %></td>
-    <td><%=h instrument.belongs_to %></td>
-    <td><%=h instrument.belongs_to %></td>
+    <td><%=h instrument.brand_id %></td>
+    <td><%=h instrument.user_id %></td>
     <td><%= link_to 'Show', instrument %></td>
     <td><%= link_to 'Edit', edit_instrument_path(instrument) %></td>
     <td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %></td>
