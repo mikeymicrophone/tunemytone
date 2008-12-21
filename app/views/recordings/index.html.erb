@@ -1,0 +1,24 @@
+<h1>Listing recordings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Excerpt</th>
+    <th>User</th>
+  </tr>
+
+<% for recording in @recordings %>
+  <tr>
+    <td><%=h recording.name %></td>
+    <td><%=h recording.excerpt %></td>
+    <td><%=h recording.user %></td>
+    <td><%= link_to 'Show', recording %></td>
+    <td><%= link_to 'Edit', edit_recording_path(recording) %></td>
+    <td><%= link_to 'Destroy', recording, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New recording', new_recording_path %>

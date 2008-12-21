@@ -1,0 +1,32 @@
+<h1>Listing venues</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Line2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Country</th>
+  </tr>
+
+<% for venue in @venues %>
+  <tr>
+    <td><%=h venue.name %></td>
+    <td><%=h venue.address %></td>
+    <td><%=h venue.line2 %></td>
+    <td><%=h venue.city %></td>
+    <td><%=h venue.state %></td>
+    <td><%=h venue.zip %></td>
+    <td><%=h venue.country %></td>
+    <td><%= link_to 'Show', venue %></td>
+    <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
+    <td><%= link_to 'Destroy', venue, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New venue', new_venue_path %>

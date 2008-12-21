@@ -1,0 +1,28 @@
+<h1>Listing albums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Performer type</th>
+    <th>Performer</th>
+    <th>Released on</th>
+    <th>User</th>
+  </tr>
+
+<% for album in @albums %>
+  <tr>
+    <td><%=h album.name %></td>
+    <td><%=h album.performer_type %></td>
+    <td><%=h album.performer_id %></td>
+    <td><%=h album.released_on %></td>
+    <td><%=h album.user %></td>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New album', new_album_path %>

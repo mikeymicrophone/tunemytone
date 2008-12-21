@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @recording.name %>
+</p>
+
+<p>
+  <b>Excerpt:</b>
+  <%=h @recording.excerpt %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @recording.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_recording_path(@recording) %> |
+<%= link_to 'Back', recordings_path %>

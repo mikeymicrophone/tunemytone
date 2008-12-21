@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @band.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @band.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_band_path(@band) %> |
+<%= link_to 'Back', bands_path %>

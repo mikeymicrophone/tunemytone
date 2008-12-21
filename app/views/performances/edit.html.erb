@@ -1,0 +1,28 @@
+<h1>Editing performance</h1>
+
+<% form_for(@performance) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :song %><br />
+    <%= f.text_field :song %>
+  </p>
+  <p>
+    <%= f.label :performed_at %><br />
+    <%= f.datetime_select :performed_at %>
+  </p>
+  <p>
+    <%= f.label :show %><br />
+    <%= f.text_field :show %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @performance %> |
+<%= link_to 'Back', performances_path %>

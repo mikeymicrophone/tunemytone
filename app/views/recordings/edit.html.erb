@@ -1,0 +1,24 @@
+<h1>Editing recording</h1>
+
+<% form_for(@recording) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :excerpt %><br />
+    <%= f.text_field :excerpt %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @recording %> |
+<%= link_to 'Back', recordings_path %>

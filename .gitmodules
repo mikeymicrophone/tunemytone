@@ -1,3 +1,6 @@
 [submodule "vendor/plugins/rails_footnotes"]
 	path = vendor/plugins/rails_footnotes
 	url = git://github.com/drnic/rails-footnotes.git
+[submodule "vendor/plugins/paperclip"]
+	path = vendor/plugins/paperclip
+	url = git://github.com/thoughtbot/paperclip.git

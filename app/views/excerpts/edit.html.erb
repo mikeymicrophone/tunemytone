@@ -1,0 +1,28 @@
+<h1>Editing excerpt</h1>
+
+<% form_for(@excerpt) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :context_type %><br />
+    <%= f.text_field :context_type %>
+  </p>
+  <p>
+    <%= f.label :context_id %><br />
+    <%= f.text_field :context_id %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @excerpt %> |
+<%= link_to 'Back', excerpts_path %>

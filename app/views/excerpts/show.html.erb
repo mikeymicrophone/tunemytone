@@ -1,0 +1,23 @@
+<p>
+  <b>Context type:</b>
+  <%=h @excerpt.context_type %>
+</p>
+
+<p>
+  <b>Context:</b>
+  <%=h @excerpt.context_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @excerpt.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @excerpt.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_excerpt_path(@excerpt) %> |
+<%= link_to 'Back', excerpts_path %>

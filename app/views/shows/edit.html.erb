@@ -1,0 +1,28 @@
+<h1>Editing show</h1>
+
+<% form_for(@show) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue %>
+  </p>
+  <p>
+    <%= f.label :performer_type %><br />
+    <%= f.text_field :performer_type %>
+  </p>
+  <p>
+    <%= f.label :performer_id %><br />
+    <%= f.text_field :performer_id %>
+  </p>
+  <p>
+    <%= f.label :performed_at %><br />
+    <%= f.datetime_select :performed_at %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @show %> |
+<%= link_to 'Back', shows_path %>

@@ -1,4 +1,26 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :participations
+
+  map.resources :recordings
+
+  map.resources :images
+
+  map.resources :venues
+
+  map.resources :shows
+
+  map.resources :excerpts
+
+  map.resources :performances
+
+  map.resources :albums
+
+  map.resources :bands
+
+  map.resources :artists
+
+  map.resources :songs
+
   map.resources :users
 
   map.resources :elements

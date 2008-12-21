@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @venue.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @venue.address %>
+</p>
+
+<p>
+  <b>Line2:</b>
+  <%=h @venue.line2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @venue.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @venue.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @venue.zip %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @venue.country %>
+</p>
+
+
+<%= link_to 'Edit', edit_venue_path(@venue) %> |
+<%= link_to 'Back', venues_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Venue:</b>
+  <%=h @show.venue %>
+</p>
+
+<p>
+  <b>Performer type:</b>
+  <%=h @show.performer_type %>
+</p>
+
+<p>
+  <b>Performer:</b>
+  <%=h @show.performer_id %>
+</p>
+
+<p>
+  <b>Performed at:</b>
+  <%=h @show.performed_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>

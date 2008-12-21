@@ -1,0 +1,23 @@
+<p>
+  <b>Artist:</b>
+  <%=h @participation.artist %>
+</p>
+
+<p>
+  <b>Duration type:</b>
+  <%=h @participation.duration_type %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @participation.duration_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @participation.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_participation_path(@participation) %> |
+<%= link_to 'Back', participations_path %>
