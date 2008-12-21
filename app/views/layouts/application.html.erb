@@ -11,6 +11,7 @@
 		<% %w[ brands configurations connections effects elements inputs instruments knobs outputs settings users ].each do |m| %>
 		  <%= link_to m, "/#{m}", :class => 'nav' %>
 		<% end %>
+		<%= login_stuff %>
 	</div>
 	<%= yield %>
 </body>
