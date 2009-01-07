@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :brand_id %><br />
-    <%= f.select :brand_id, Brand.map_name_and_id %>
+    <%= f.select :brand_id, Brand.map_name_and_id, :include_blank => true %>
   </p>
   <p>
     <%= f.submit "Create" %>
