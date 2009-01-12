@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  knob: 
+  user: 
+  value: 1
+
+two:
+  knob: 
+  user: 
+  value: 1

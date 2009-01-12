@@ -17,9 +17,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :albums
 
-  map.resources :bands
+  map.resources :bands, :has_many => :albums
 
-  map.resources :artists
+  map.resources :artists, :has_many => :albums
 
   map.resources :songs
 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  configuration: 
+  example_type: MyString
+  example_id: 1
+  user: 
+
+two:
+  configuration: 
+  example_type: MyString
+  example_id: 1
+  user: 

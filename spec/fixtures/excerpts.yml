@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  context_type: MyString
+  context_id: 1
+  description: MyString
+  user: 
+
+two:
+  context_type: MyString
+  context_id: 1
+  description: MyString
+  user: 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  song: 
+  performed_at: 2008-12-20 21:58:55
+  show: 
+  user: 
+
+two:
+  song: 
+  performed_at: 2008-12-20 21:58:55
+  show: 
+  user: 

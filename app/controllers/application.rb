@@ -22,10 +22,29 @@ class ApplicationController < ActionController::Base
         if model.new.respond_to?(k)
           params[controller_name.singularize][k] = v
         else
-          params[controller_name.singularize]['target_id'] = v
+          params[controller_name.singularize]["#{polymorphic_attribute(controller_name)}_id"] = v
           k =~ /(\w+)_id/
-          params[controller_name.singularize]['target_type'] = $1.camelize
+          params[controller_name.singularize]["#{polymorphic_attribute(controller_name)}_type"] = $1.camelize
         end
+      end
+    end
+    
+    def polymorphic_attribute obj
+      case obj
+      when 'albums', 'shows'
+        'performer'
+      when 'elements'
+        'specification'
+      when 'excerpts'
+        'context'
+      when 'inputs', 'knobs', 'outputs'
+        'host'
+      when 'participations'
+        'duration'
+      when 'sounds'
+        'example'
+      else 
+        'target'
       end
     end
   

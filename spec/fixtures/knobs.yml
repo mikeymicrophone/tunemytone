@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  host_type: MyString
+  host_id: 1
+  name: MyString
+  discrete: 1
+  user: 
+
+two:
+  host_type: MyString
+  host_id: 1
+  name: MyString
+  discrete: 1
+  user: 

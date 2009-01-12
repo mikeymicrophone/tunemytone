@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  performer_type: MyString
+  performer_id: 1
+  released_on: 2008-12-20
+  user: 
+
+two:
+  name: MyString
+  performer_type: MyString
+  performer_id: 1
+  released_on: 2008-12-20
+  user: 

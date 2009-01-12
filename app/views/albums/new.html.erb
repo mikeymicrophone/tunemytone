@@ -7,22 +7,24 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
-  <p>
-    <%= f.label :performer_type %><br />
-    <%= f.text_field :performer_type %>
-  </p>
-  <p>
-    <%= f.label :performer_id %><br />
-    <%= f.text_field :performer_id %>
-  </p>
+  <% unless @album.performer %>
+	  <p>
+	    <%= f.label :performer_type %><br />
+	    <%= f.text_field :performer_type %>
+	  </p>
+	  <p>
+	    <%= f.label :performer_id %><br />
+	    <%= f.text_field :performer_id %>
+	  </p>
+	<% else %>
+	  <%= f.hidden_field :performer_type %>
+	  <%= f.hidden_field :performer_id %>
+	<% end %>
   <p>
     <%= f.label :released_on %><br />
-    <%= f.date_select :released_on %>
+    <%= f.date_select :released_on, :start_year => 1900, :end_year => 2009 %>
   </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
+
   <p>
     <%= f.submit "Create" %>
   </p>

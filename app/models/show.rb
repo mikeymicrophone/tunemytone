@@ -1,4 +1,5 @@
 class Show < ActiveRecord::Base
+  belongs_to :user
   belongs_to :venue
   belongs_to :performer, :polymorphic => true
   has_many :sounds, :as => :example

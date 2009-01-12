@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.xml
   def index
-    @albums = Album.find(:all)
+    @albums = Album.scope_down(self, params, 'band', 'artist')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,11 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   # GET /albums/new.xml
   def new
-    @album = Album.new
+    params[:album] ||= {}
+    params[:album][:performer_id], params[:album][:performer_type] = params[:album][:band_id], 'Band' if params[:album][:band_id]
+    params[:album][:performer_id], params[:album][:performer_type] = params[:album][:artist_id], 'Artist' if params[:album][:artist_id]
+    params[:album].delete_if { |k, v| k.to_s =~ /artist|band/ }
+    @album = Album.new params[:album]
 
     respond_to do |format|
       format.html # new.html.erb

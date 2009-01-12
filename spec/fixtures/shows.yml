@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  venue: 
+  performer_type: MyString
+  performer_id: 1
+  performed_at: 2008-12-20 21:59:13
+
+two:
+  venue: 
+  performer_type: MyString
+  performer_id: 1
+  performed_at: 2008-12-20 21:59:13

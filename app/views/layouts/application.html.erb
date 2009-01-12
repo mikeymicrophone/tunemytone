@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="navigation">
-		<% %w[ brands configurations connections effects elements inputs instruments knobs outputs settings users ].each do |m| %>
+		<% %w[ brands configurations connections effects elements inputs instruments knobs outputs settings albums artists bands excerpts images participations performances recordings shows songs sounds venues users ].each do |m| %>
 		  <%= link_to m, "/#{m}", :class => 'nav' %>
 		<% end %>
 		<%= login_stuff %>

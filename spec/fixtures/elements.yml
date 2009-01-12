@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  specification_type: MyString
+  specification_id: 1
+  configuration: 
+  user: 
+
+two:
+  specification_type: MyString
+  specification_id: 1
+  configuration: 
+  user: 
