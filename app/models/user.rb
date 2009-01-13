@@ -11,4 +11,15 @@ class User < ActiveRecord::Base
   has_many :knobs
   has_many :outputs
   has_many :settings
+  has_many :albums
+  has_many :artists
+  has_many :bands
+  has_many :images
+  has_many :participations
+  has_many :performances
+  has_many :recordings
+  has_many :shows
+  has_many :songs
+  has_many :sounds
+  has_many :venues
 end

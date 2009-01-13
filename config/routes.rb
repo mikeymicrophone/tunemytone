@@ -3,47 +3,47 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :participations
 
-  map.resources :recordings
+  map.resources :recordings, :has_many => [:sounds]
 
   map.resources :images
 
-  map.resources :venues
+  map.resources :venues, :has_many => [:shows]
 
-  map.resources :shows
+  map.resources :shows, :has_many => [:sounds, :participations]
 
-  map.resources :excerpts
+  map.resources :excerpts, :has_many => [:sounds]
 
-  map.resources :performances
+  map.resources :performances, :has_many => [:excerpts, :sounds, :participations]
 
-  map.resources :albums
+  map.resources :albums, :has_many => [:sounds]
 
-  map.resources :bands, :has_many => :albums
+  map.resources :bands, :has_many => [:albums, :shows, :sounds, :participations]
 
-  map.resources :artists, :has_many => :albums
+  map.resources :artists, :has_many => [:albums, :shows, :sounds, :participations]
 
-  map.resources :songs
+  map.resources :songs, :has_many => [:sounds, :excerpts, :performances]
 
-  map.resources :users
+  map.resources :users, :has_many => [:brands, :configurations, :connections, :effects, :elements, :inputs, :instruments, :knobs, :outputs, :settings, :albums, :artists, :bands, :images, :participations, :performances, :recordings, :shows, :songs, :sounds, :venues]
 
   map.resources :elements
 
-  map.resources :configurations
+  map.resources :configurations, :has_many => [:sounds, :uses, :elements]
 
-  map.resources :connections
+  map.resources :connections, :has_many => [:elements, :configurations]
 
-  map.resources :outputs
+  map.resources :outputs, :has_many => [:connections, :inputs, :elements]
 
-  map.resources :inputs
+  map.resources :inputs, :has_many => [:connections, :outputs, :elements]
 
-  map.resources :settings
+  map.resources :settings, :has_many => [:elements]
 
-  map.resources :knobs
+  map.resources :knobs, :has_many => [:settings]
 
-  map.resources :effects
+  map.resources :effects, :has_many => [:knobs, :inputs, :outputs]
 
-  map.resources :brands
+  map.resources :brands, :has_many => [:instruments, :effects]
 
-  map.resources :instruments
+  map.resources :instruments, :has_many => [:inputs, :outputs, :knobs, :elements, :configurations]
   
   map.resource :user_session
   map.root :controller => "user_sessions", :action => "new"
