@@ -8,6 +8,10 @@
   <%=h @configuration.user %>
 </p>
 
+<% @configuration.elements.each do |e| %>
+  <%= link_to 'this', e %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_configuration_path(@configuration) %> |
 <%= link_to 'Back', configurations_path %>
