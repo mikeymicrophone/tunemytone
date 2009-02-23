@@ -2,16 +2,18 @@ default_run_options[:pty] = true
 
 # be sure to change these
 set :user, 'tunemytone'
-set :domain, 'tunemytone.com'
+# set :domain, 'tunemytone.com'
+set :domain, '173.45.232.232'
 set :application, 'tunemytone'
 
 # the rest should be good
-set :repository,  "git@github.com:schwabsauce/#{application}.git" 
-set :deploy_to, "/home/#{user}/#{domain}" 
+set :repository,  "git://github.com/schwabsauce/#{application}.git" 
+set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
-set :git_shallow_clone, 1
+set :git_enable_submodules, 1
+# set :git_shallow_clone, 1
 set :scm_verbose, true
 set :use_sudo, false
 
