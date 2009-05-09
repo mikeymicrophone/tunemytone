@@ -6,9 +6,9 @@ describe "/connections/new.html.erb" do
   before(:each) do
     assigns[:connection] = stub_model(Connection,
       :new_record? => true,
-      :output => ,
-      :input => ,
-      :user => 
+      :output => Output.make,
+      :input => Input.make,
+      :user => User.make
     )
   end
 

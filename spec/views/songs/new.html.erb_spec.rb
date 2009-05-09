@@ -7,7 +7,7 @@ describe "/songs/new.html.erb" do
     assigns[:song] = stub_model(Song,
       :new_record? => true,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

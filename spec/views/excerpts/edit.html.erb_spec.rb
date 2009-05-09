@@ -8,7 +8,7 @@ describe "/excerpts/edit.html.erb" do
       :new_record? => false,
       :context_type => "value for context_type",
       :description => "value for description",
-      :user => 
+      :user => User.make
     )
   end
 

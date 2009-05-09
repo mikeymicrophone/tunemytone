@@ -5,8 +5,8 @@ describe "/settings/show.html.erb" do
   
   before(:each) do
     assigns[:setting] = @setting = stub_model(Setting,
-      :knob => ,
-      :user => ,
+      :knob => Knob.make,
+      :user => User.make,
       :value => "1"
     )
   end

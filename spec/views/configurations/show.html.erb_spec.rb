@@ -6,7 +6,7 @@ describe "/configurations/show.html.erb" do
   before(:each) do
     assigns[:configuration] = @configuration = stub_model(Configuration,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

@@ -8,12 +8,12 @@ describe "/inputs/index.html.erb" do
       stub_model(Input,
         :host_type => "value for host_type",
         :description => "value for description",
-        :user => 
+        :user => User.make
       ),
       stub_model(Input,
         :host_type => "value for host_type",
         :description => "value for description",
-        :user => 
+        :user => User.make
       )
     ]
   end
@@ -22,7 +22,7 @@ describe "/inputs/index.html.erb" do
     render "/inputs/index.html.erb"
     response.should have_tag("tr>td", "value for host_type", 2)
     response.should have_tag("tr>td", "value for description", 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

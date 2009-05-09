@@ -7,8 +7,8 @@ describe "/elements/edit.html.erb" do
     assigns[:element] = @element = stub_model(Element,
       :new_record? => false,
       :specification_type => "value for specification_type",
-      :configuration => ,
-      :user => 
+      :configuration => Configuration.make,
+      :user => User.make
     )
   end
 

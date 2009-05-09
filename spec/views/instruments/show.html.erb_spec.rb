@@ -6,8 +6,8 @@ describe "/instruments/show.html.erb" do
   before(:each) do
     assigns[:instrument] = @instrument = stub_model(Instrument,
       :name => "value for name",
-      :belongs_to => ,
-      :belongs_to => 
+      :brand => Brand.make,
+      :user => User.make
     )
   end
 

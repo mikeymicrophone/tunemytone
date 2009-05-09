@@ -8,7 +8,7 @@ describe "/outputs/edit.html.erb" do
       :new_record? => false,
       :host_type => "value for host_type",
       :description => "value for description",
-      :user => 
+      :user => User.make
     )
   end
 

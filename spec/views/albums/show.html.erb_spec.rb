@@ -7,7 +7,7 @@ describe "/albums/show.html.erb" do
     assigns[:album] = @album = stub_model(Album,
       :name => "value for name",
       :performer_type => "value for performer_type",
-      :user => 
+      :user => User.make
     )
   end
 

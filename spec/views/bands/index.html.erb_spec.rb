@@ -7,11 +7,11 @@ describe "/bands/index.html.erb" do
     assigns[:bands] = [
       stub_model(Band,
         :name => "value for name",
-        :user => 
+        :user => User.make
       ),
       stub_model(Band,
         :name => "value for name",
-        :user => 
+        :user => User.make
       )
     ]
   end
@@ -19,7 +19,7 @@ describe "/bands/index.html.erb" do
   it "should render list of bands" do
     render "/bands/index.html.erb"
     response.should have_tag("tr>td", "value for name", 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

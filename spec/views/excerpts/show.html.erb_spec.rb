@@ -7,7 +7,7 @@ describe "/excerpts/show.html.erb" do
     assigns[:excerpt] = @excerpt = stub_model(Excerpt,
       :context_type => "value for context_type",
       :description => "value for description",
-      :user => 
+      :user => User.make
     )
   end
 

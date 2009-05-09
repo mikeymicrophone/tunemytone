@@ -7,7 +7,7 @@ describe "/artists/edit.html.erb" do
     assigns[:artist] = @artist = stub_model(Artist,
       :new_record? => false,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

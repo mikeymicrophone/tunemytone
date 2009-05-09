@@ -6,7 +6,7 @@ describe "/images/show.html.erb" do
   before(:each) do
     assigns[:image] = @image = stub_model(Image,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

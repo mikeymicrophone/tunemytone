@@ -20,3 +20,7 @@ config.action_controller.allow_forgery_protection    = false
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
+
+#config.gem 'notahat-machinist', :source => 'http://gems.github.com', :library => 'machinist'
+config.gem 'faker'
+require 'machinist'

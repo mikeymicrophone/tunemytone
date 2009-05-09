@@ -5,9 +5,9 @@ describe "/connections/show.html.erb" do
   
   before(:each) do
     assigns[:connection] = @connection = stub_model(Connection,
-      :output => ,
-      :input => ,
-      :user => 
+      :output => Output.make,
+      :input => Input.make,
+      :user => User.make
     )
   end
 

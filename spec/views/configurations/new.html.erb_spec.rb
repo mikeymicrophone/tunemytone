@@ -7,7 +7,7 @@ describe "/configurations/new.html.erb" do
     assigns[:configuration] = stub_model(Configuration,
       :new_record? => true,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

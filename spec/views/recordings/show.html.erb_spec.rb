@@ -6,8 +6,8 @@ describe "/recordings/show.html.erb" do
   before(:each) do
     assigns[:recording] = @recording = stub_model(Recording,
       :name => "value for name",
-      :excerpt => ,
-      :user => 
+      :excerpt => Excerpt.make,
+      :user => User.make
     )
   end
 

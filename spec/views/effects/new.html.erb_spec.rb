@@ -7,8 +7,8 @@ describe "/effects/new.html.erb" do
     assigns[:effect] = stub_model(Effect,
       :new_record? => true,
       :name => "value for name",
-      :brand => ,
-      :user => 
+      :brand => Brand.make,
+      :user => User.make
     )
   end
 

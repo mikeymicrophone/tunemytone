@@ -8,12 +8,12 @@ describe "/brands/index.html.erb" do
       stub_model(Brand,
         :name => "value for name",
         :homepage => "value for homepage",
-        :user => 
+        :user => User.make
       ),
       stub_model(Brand,
         :name => "value for name",
         :homepage => "value for homepage",
-        :user => 
+        :user => User.make
       )
     ]
   end
@@ -22,7 +22,7 @@ describe "/brands/index.html.erb" do
     render "/brands/index.html.erb"
     response.should have_tag("tr>td", "value for name", 2)
     response.should have_tag("tr>td", "value for homepage", 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

@@ -6,23 +6,23 @@ describe "/connections/index.html.erb" do
   before(:each) do
     assigns[:connections] = [
       stub_model(Connection,
-        :output => ,
-        :input => ,
-        :user => 
+        :output => Output.make,
+        :input => Input.make,
+        :user => User.make
       ),
       stub_model(Connection,
-        :output => ,
-        :input => ,
-        :user => 
+        :output => Output.make,
+        :input => Input.make,
+        :user => User.make
       )
     ]
   end
 
   it "should render list of connections" do
     render "/connections/index.html.erb"
-    response.should have_tag("tr>td", , 2)
-    response.should have_tag("tr>td", , 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'pizzle', 2)
+    response.should have_tag("tr>td", 'pozzle', 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

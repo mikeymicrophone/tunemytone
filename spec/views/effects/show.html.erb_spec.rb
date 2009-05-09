@@ -6,8 +6,8 @@ describe "/effects/show.html.erb" do
   before(:each) do
     assigns[:effect] = @effect = stub_model(Effect,
       :name => "value for name",
-      :brand => ,
-      :user => 
+      :brand => Brand.make,
+      :user => User.make
     )
   end
 

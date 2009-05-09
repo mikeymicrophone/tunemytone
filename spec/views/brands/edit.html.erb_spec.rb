@@ -8,7 +8,7 @@ describe "/brands/edit.html.erb" do
       :new_record? => false,
       :name => "value for name",
       :homepage => "value for homepage",
-      :user => 
+      :user => User.make
     )
   end
 

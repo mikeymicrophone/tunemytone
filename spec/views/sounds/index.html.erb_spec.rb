@@ -6,23 +6,23 @@ describe "/sounds/index.html.erb" do
   before(:each) do
     assigns[:sounds] = [
       stub_model(Sound,
-        :configuration => ,
+        :configuration => Configuration.make,
         :example_type => "value for example_type",
-        :user => 
+        :user => User.make
       ),
       stub_model(Sound,
-        :configuration => ,
+        :configuration => Configuration.make,
         :example_type => "value for example_type",
-        :user => 
+        :user => User.make
       )
     ]
   end
 
   it "should render list of sounds" do
     render "/sounds/index.html.erb"
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'nasty', 2)
     response.should have_tag("tr>td", "value for example_type", 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

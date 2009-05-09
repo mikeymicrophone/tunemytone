@@ -7,8 +7,8 @@ describe "/instruments/edit.html.erb" do
     assigns[:instrument] = @instrument = stub_model(Instrument,
       :new_record? => false,
       :name => "value for name",
-      :belongs_to => ,
-      :belongs_to => 
+      :brand => Brand.make,
+      :user => User.make
     )
   end
 

@@ -6,9 +6,9 @@ describe "/participations/new.html.erb" do
   before(:each) do
     assigns[:participation] = stub_model(Participation,
       :new_record? => true,
-      :artist => ,
+      :artist => Artist.make,
       :duration_type => "value for duration_type",
-      :user => 
+      :user => User.make
     )
   end
 

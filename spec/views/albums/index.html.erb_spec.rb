@@ -8,12 +8,12 @@ describe "/albums/index.html.erb" do
       stub_model(Album,
         :name => "value for name",
         :performer_type => "value for performer_type",
-        :user => 
+        :user => User.make
       ),
       stub_model(Album,
         :name => "value for name",
         :performer_type => "value for performer_type",
-        :user => 
+        :user => User.make
       )
     ]
   end
@@ -22,7 +22,7 @@ describe "/albums/index.html.erb" do
     render "/albums/index.html.erb"
     response.should have_tag("tr>td", "value for name", 2)
     response.should have_tag("tr>td", "value for performer_type", 2)
-    response.should have_tag("tr>td", , 2)
+    response.should have_tag("tr>td", 'billy', 2)
   end
 end
 

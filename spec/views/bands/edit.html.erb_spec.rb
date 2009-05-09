@@ -7,7 +7,7 @@ describe "/bands/edit.html.erb" do
     assigns[:band] = @band = stub_model(Band,
       :new_record? => false,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

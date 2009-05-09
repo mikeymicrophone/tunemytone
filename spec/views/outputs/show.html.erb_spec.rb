@@ -7,7 +7,7 @@ describe "/outputs/show.html.erb" do
     assigns[:output] = @output = stub_model(Output,
       :host_type => "value for host_type",
       :description => "value for description",
-      :user => 
+      :user => User.make
     )
   end
 

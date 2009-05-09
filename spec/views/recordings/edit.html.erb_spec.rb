@@ -7,8 +7,8 @@ describe "/recordings/edit.html.erb" do
     assigns[:recording] = @recording = stub_model(Recording,
       :new_record? => false,
       :name => "value for name",
-      :excerpt => ,
-      :user => 
+      :excerpt => Excerpt.make,
+      :user => User.make
     )
   end
 

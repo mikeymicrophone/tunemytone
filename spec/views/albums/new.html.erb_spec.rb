@@ -8,7 +8,7 @@ describe "/albums/new.html.erb" do
       :new_record? => true,
       :name => "value for name",
       :performer_type => "value for performer_type",
-      :user => 
+      :user => User.make
     )
   end
 

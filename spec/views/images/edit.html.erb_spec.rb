@@ -7,7 +7,7 @@ describe "/images/edit.html.erb" do
     assigns[:image] = @image = stub_model(Image,
       :new_record? => false,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

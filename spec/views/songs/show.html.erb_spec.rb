@@ -6,7 +6,7 @@ describe "/songs/show.html.erb" do
   before(:each) do
     assigns[:song] = @song = stub_model(Song,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

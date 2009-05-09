@@ -6,8 +6,8 @@ describe "/elements/show.html.erb" do
   before(:each) do
     assigns[:element] = @element = stub_model(Element,
       :specification_type => "value for specification_type",
-      :configuration => ,
-      :user => 
+      :configuration => Configuration.make,
+      :user => User.make
     )
   end
 

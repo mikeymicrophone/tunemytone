@@ -6,7 +6,7 @@ describe "/bands/show.html.erb" do
   before(:each) do
     assigns[:band] = @band = stub_model(Band,
       :name => "value for name",
-      :user => 
+      :user => User.make
     )
   end
 

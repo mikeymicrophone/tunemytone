@@ -7,7 +7,7 @@ describe "/brands/show.html.erb" do
     assigns[:brand] = @brand = stub_model(Brand,
       :name => "value for name",
       :homepage => "value for homepage",
-      :user => 
+      :user => User.make
     )
   end
 

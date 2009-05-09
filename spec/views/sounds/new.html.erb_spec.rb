@@ -6,9 +6,9 @@ describe "/sounds/new.html.erb" do
   before(:each) do
     assigns[:sound] = stub_model(Sound,
       :new_record? => true,
-      :configuration => ,
+      :configuration => Configuration.make,
       :example_type => "value for example_type",
-      :user => 
+      :user => User.make
     )
   end
 

@@ -9,7 +9,7 @@ describe "/knobs/new.html.erb" do
       :host_type => "value for host_type",
       :name => "value for name",
       :discrete => "1",
-      :user => 
+      :user => User.make
     )
   end
 

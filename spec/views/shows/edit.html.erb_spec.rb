@@ -6,8 +6,8 @@ describe "/shows/edit.html.erb" do
   before(:each) do
     assigns[:show] = @show = stub_model(Show,
       :new_record? => false,
-      :venue => ,
-      :performer_type => "value for performer_type",
+      :venue => Venue.make,
+      :performer_type => "value for performer_type"
     )
   end
 
