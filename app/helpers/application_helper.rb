@@ -78,10 +78,12 @@ module ApplicationHelper
   end
   
   def login_stuff
+    content_tag(:div, 
     if current_user
       link_to 'log out', logout_path
     else
       link_to('sign up', signup_path) + link_to('log in', login_path)
-    end
+    end, :class => 'user-logging')
+    
   end
 end

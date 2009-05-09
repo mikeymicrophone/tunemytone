@@ -47,3 +47,31 @@ Spec::Runner.configure do |config|
   # 
   # For more information take a look at Spec::Example::Configuration and Spec::Runner
 end
+class BeKindOf
+  
+  def initialize(expected) # + args
+    @expected = expected
+  end
+ 
+  def matches?(target)
+    @target = target
+    @target.kind_of?(@expected)
+  end
+ 
+  def failure_message
+    "expected #{@expected} but got #{@target.class}"
+  end
+ 
+  def negative_failure_message
+    "expected #{@expected} to not be #{@target.class}"
+  end
+ 
+  def description
+    "be_kind_of #{@target}"
+  end
+ 
+end
+
+def be_kind_of(expected) # + args
+  BeKindOf.new(expected)
+end

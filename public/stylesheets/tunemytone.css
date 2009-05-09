@@ -1,0 +1,31 @@
+.user-logging {
+	float:right;
+}
+.user-logging a {
+	padding: 10px;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #2F992A;
+}
+
+#navigation a.nav {
+	text-decoration: none;
+	color: #991749;
+	font-weight: bold;
+	font-size: .96em;
+	margin: 14px;
+}
+
+a {
+	font-size: .96em;
+	color: #331214;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	font-family: arial;
+}
