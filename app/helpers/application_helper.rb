@@ -84,6 +84,5 @@ module ApplicationHelper
     else
       link_to('sign up', signup_path) + link_to('log in', login_path)
     end, :class => 'user-logging')
-    
   end
 end

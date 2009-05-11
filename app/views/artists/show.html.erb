@@ -1,13 +1,6 @@
 <p>
-  <b>Name:</b>
   <%=h @artist.name %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%=h @artist.user %>
-</p>
-
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<%= scoped_new_link 'album' %>
+<%= scoped_new_link 'show' %>

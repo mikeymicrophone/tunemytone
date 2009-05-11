@@ -1,19 +1,17 @@
-<h1>New connection</h1>
+<h1>connect your gear</h1>
 
-<% form_for(@connection) do |f| %>
+<% form_for @connection do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :output_id %><br />
-    <%= f.text_field :output_id %>
+    <%= f.select :output_id, Output.map_name_and_id %>
   </p>
   <p>
     <%= f.label :input_id %><br />
-    <%= f.text_field :input_id %>
+    <%= f.text_field :input_id, Input.map_name_and_id %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit :connect %>
   </p>
 <% end %>
-
-<%= link_to 'Back', connections_path %>

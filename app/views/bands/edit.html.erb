@@ -1,20 +1,12 @@
-<h1>Editing band</h1>
+<h1>rename <%= @band.name %></h1>
 
-<% form_for(@band) do |f| %>
+<% form_for @band do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
+    <%= f.submit :rename %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @band %> |
-<%= link_to 'Back', bands_path %>

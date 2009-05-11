@@ -1,22 +1,7 @@
-<h1>Listing bands</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>User</th>
-  </tr>
-
 <% for band in @bands %>
-  <tr>
-    <td><%=h band.name %></td>
-    <td><%=h band.user %></td>
-    <td><%= link_to 'Show', band %></td>
-    <td><%= link_to 'Edit', edit_band_path(band) %></td>
-    <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <%= link_to_name band %>
 <% end %>
-</table>
 
 <br />
 
-<%= link_to 'New band', new_band_path %>
+<%= link_to 'new band', new_band_path %>

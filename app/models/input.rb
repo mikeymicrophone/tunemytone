@@ -8,4 +8,8 @@ class Input < ActiveRecord::Base
   def configurations
     elements.map(&:configuration)
   end
+  
+  def name
+    host.name + ' ' + description
+  end
 end

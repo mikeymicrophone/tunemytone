@@ -1,18 +1,22 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => '6eda2b5feebafeed9b2c33866bb66db7'
+  helper :all
+  protect_from_forgery
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   before_filter :load_user_into_ar
   before_filter :prefix_params, :only => [:new, :create]
+  before_filter :load_scope_object, :only => [:show, :edit, :update, :destroy]
 
   private
+    def load_scope_object
+      @scope_object = send_to_model(:find, params[:id])
+      instance_variable_set('@' + controller_name.singularize, @scope_object)
+    end
+    
+    def send_to_model *args
+      controller_name.classify.constantize.send *args
+    end
+  
     def prefix_params
       ids = params.select { |k, v| k =~ /_id/ }
       ids.reject { |k, v| k =~ /#{controller_name}/ } # shouldn't hit anyway because this is only for the new and create actions

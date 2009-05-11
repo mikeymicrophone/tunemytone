@@ -1,27 +1,30 @@
-<h1>New show</h1>
+<h1>show
+  <%=' by ' + @show.performer.name if @show.performer %>  
+</h1>
 
-<% form_for(@show) do |f| %>
+<% form_for @show do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :venue %><br />
-    <%= f.text_field :venue %>
+    <%= f.select :venue, Venue.map_name_and_id %>
   </p>
-  <p>
-    <%= f.label :performer_type %><br />
-    <%= f.text_field :performer_type %>
-  </p>
-  <p>
-    <%= f.label :performer_id %><br />
-    <%= f.text_field :performer_id %>
-  </p>
+  <% unless @show.performer %>
+    <p>
+      <%= f.label :performer_type %><br />
+      <%= f.text_field :performer_type %>
+    </p>
+    <p>
+      <%= f.label :performer_id %><br />
+      <%= f.text_field :performer_id %>
+    </p>
+  <% end %>
   <p>
     <%= f.label :performed_at %><br />
     <%= f.datetime_select :performed_at %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit 'blitz' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', shows_path %>
