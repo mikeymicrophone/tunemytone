@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
 
   private
     def load_scope_object
-      @scope_object = send_to_model(:find, params[:id])
-      instance_variable_set('@' + controller_name.singularize, @scope_object)
+      unless !params[:id]
+        @scope_object = send_to_model(:find, params[:id])
+        instance_variable_set('@' + controller_name.singularize, @scope_object)
+      end
     end
     
     def send_to_model *args

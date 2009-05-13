@@ -13,4 +13,12 @@ Feature: creating an account
 		And he presses 'Create'
 		Then there should be a user called 'barnard'
 		
-	
+	Scenario: signing in
+	  Given a user "bibb" with password "beeeeeel"
+	  And no one is logged in
+	  And he is at the login page
+	  When he enters these values:
+	    | username | pw |
+	    | bibb | beeeeeel | 
+	  And he presses 'login'
+	  Then bibb should be logged in

@@ -10,6 +10,8 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
+    when /the song page for ([\w\s']+)/
+      song_path(Song.find_by_name($1))
     
     # Add more mappings here.
     # Here is a more fancy example:
