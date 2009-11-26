@@ -2,21 +2,15 @@
 
 <table>
   <tr>
-    <th>Host type</th>
     <th>Host</th>
     <th>Description</th>
-    <th>User</th>
   </tr>
 
 <% for output in @outputs %>
   <tr>
-    <td><%=h output.host_type %></td>
-    <td><%=h output.host_id %></td>
+    <td><%= link_to_name output.host %></td>
     <td><%=h output.description %></td>
-    <td><%=h output.user %></td>
     <td><%= link_to 'Show', output %></td>
-    <td><%= link_to 'Edit', edit_output_path(output) %></td>
-    <td><%= link_to 'Destroy', output, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -24,7 +24,7 @@ class ElementsController < ApplicationController
   # GET /elements/new
   # GET /elements/new.xml
   def new
-    @element = Element.new
+    @element = Element.new params[:element]
 
     respond_to do |format|
       format.html # new.html.erb

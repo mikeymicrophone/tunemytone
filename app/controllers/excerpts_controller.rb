@@ -24,7 +24,7 @@ class ExcerptsController < ApplicationController
   # GET /excerpts/new
   # GET /excerpts/new.xml
   def new
-    @excerpt = Excerpt.new
+    @excerpt = Excerpt.new params[:excerpt]
 
     respond_to do |format|
       format.html # new.html.erb

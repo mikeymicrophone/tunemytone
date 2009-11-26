@@ -24,7 +24,7 @@ class BrandsController < ApplicationController
   # GET /brands/new
   # GET /brands/new.xml
   def new
-    @brand = Brand.new
+    @brand = Brand.new params[:brand]
 
     respond_to do |format|
       format.html # new.html.erb

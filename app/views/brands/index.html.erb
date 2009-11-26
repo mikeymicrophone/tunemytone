@@ -4,9 +4,8 @@
 
 <% for brand in @brands %>
   <tr>
-    <td><%=h brand.name %></td>
+    <td><%= link_to_name brand %></td>
     <td><%=h brand.homepage %></td>
-    <td><%= link_to 'Show', brand %></td>
   </tr>
 <% end %>
 </table>

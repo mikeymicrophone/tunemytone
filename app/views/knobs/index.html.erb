@@ -2,23 +2,17 @@
 
 <table>
   <tr>
-    <th>Host type</th>
     <th>Host</th>
     <th>Name</th>
     <th>Discrete</th>
-    <th>User</th>
   </tr>
 
 <% for knob in @knobs %>
   <tr>
-    <td><%=h knob.host_type %></td>
-    <td><%=h knob.host_id %></td>
+    <td><%= link_to_name knob.host %></td>
     <td><%=h knob.name %></td>
     <td><%=h knob.discrete %></td>
-    <td><%=h knob.user %></td>
     <td><%= link_to 'Show', knob %></td>
-    <td><%= link_to 'Edit', edit_knob_path(knob) %></td>
-    <td><%= link_to 'Destroy', knob, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

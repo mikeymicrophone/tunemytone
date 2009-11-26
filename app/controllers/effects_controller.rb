@@ -24,7 +24,7 @@ class EffectsController < ApplicationController
   # GET /effects/new
   # GET /effects/new.xml
   def new
-    @effect = Effect.new
+    @effect = Effect.new params[:effect]
 
     respond_to do |format|
       format.html # new.html.erb

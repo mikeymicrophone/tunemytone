@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :knob %><br />
-    <%= f.text_field :knob %>
+    <%= f.select :knob, Knob.map_name_and_id %>
   </p>
   <p>
     <%= f.label :value %><br />

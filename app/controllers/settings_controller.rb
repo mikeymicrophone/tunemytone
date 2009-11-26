@@ -24,7 +24,7 @@ class SettingsController < ApplicationController
   # GET /settings/new
   # GET /settings/new.xml
   def new
-    @setting = Setting.new
+    @setting = Setting.new params[:setting]
 
     respond_to do |format|
       format.html # new.html.erb

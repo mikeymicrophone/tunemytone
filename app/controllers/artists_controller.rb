@@ -18,7 +18,7 @@ class ArtistsController < ApplicationController
   # GET /artists/new
   # GET /artists/new.xml
   def new
-    @artist = Artist.new
+    @artist = Artist.new params[:artist]
 
     respond_to do |format|
       format.html # new.html.erb

@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Context type</th>
     <th>Context</th>
     <th>Description</th>
     <th>User</th>
@@ -10,13 +9,10 @@
 
 <% for excerpt in @excerpts %>
   <tr>
-    <td><%=h excerpt.context_type %></td>
-    <td><%=h excerpt.context_id %></td>
+    <td><%=h excerpt.context %></td>
     <td><%=h excerpt.description %></td>
-    <td><%=h excerpt.user %></td>
+    <td><%= link_to_name excerpt.user %></td>
     <td><%= link_to 'Show', excerpt %></td>
-    <td><%= link_to 'Edit', edit_excerpt_path(excerpt) %></td>
-    <td><%= link_to 'Destroy', excerpt, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

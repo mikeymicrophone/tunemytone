@@ -13,7 +13,7 @@
   </p>
   <p>
     <%= f.label :configuration_id %><br />
-    <%= f.text_field :configuration_id %>
+    <%= f.select :configuration_id, Configuration.map_name_and_id %>
   </p>
   <p>
     <%= f.submit "Create" %>

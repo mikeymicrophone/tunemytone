@@ -9,12 +9,10 @@
 
 <% for connection in @connections %>
   <tr>
-    <td><%=h connection.output %></td>
-    <td><%=h connection.input %></td>
-    <td><%=h connection.user %></td>
+    <td><%= link_to_name connection.output %></td>
+    <td><%= link_to_name connection.input %></td>
+    <td><%= link_to_name connection.user %></td>
     <td><%= link_to 'Show', connection %></td>
-    <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
-    <td><%= link_to 'Destroy', connection, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -5,18 +5,14 @@
     <th>Song</th>
     <th>Performed at</th>
     <th>Show</th>
-    <th>User</th>
   </tr>
 
 <% for performance in @performances %>
   <tr>
-    <td><%=h performance.song %></td>
+    <td><%= link_to_name performance.song %></td>
     <td><%=h performance.performed_at %></td>
-    <td><%=h performance.show %></td>
-    <td><%=h performance.user %></td>
+    <td><%= link_to_name performance.show %></td>
     <td><%= link_to 'Show', performance %></td>
-    <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
-    <td><%= link_to 'Destroy', performance, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

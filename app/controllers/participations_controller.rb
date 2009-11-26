@@ -24,7 +24,7 @@ class ParticipationsController < ApplicationController
   # GET /participations/new
   # GET /participations/new.xml
   def new
-    @participation = Participation.new
+    @participation = Participation.new params[:participation]
 
     respond_to do |format|
       format.html # new.html.erb

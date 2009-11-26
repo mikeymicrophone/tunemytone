@@ -13,6 +13,11 @@
   <%=h @show.performed_at %>
 </p>
 
-
+<% @show.performances.each do |p| %>
+  <%= link_to_name p %><br>
+<% end %>
+<%= scoped_collection_link 'performance', @show %>
+<%= scoped_new_link 'performance' %>
+<br>
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>

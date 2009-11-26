@@ -24,7 +24,7 @@ class VenuesController < ApplicationController
   # GET /venues/new
   # GET /venues/new.xml
   def new
-    @venue = Venue.new
+    @venue = Venue.new params[:venue]
 
     respond_to do |format|
       format.html # new.html.erb

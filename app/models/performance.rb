@@ -5,4 +5,8 @@ class Performance < ActiveRecord::Base
   has_many :excerpts, :as => :context
   has_many :sounds, :as => :example
   has_many :participations, :as => :duration
+  
+  def name
+    song.name + ' at ' + show.name
+  end
 end

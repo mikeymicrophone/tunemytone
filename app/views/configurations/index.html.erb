@@ -8,11 +8,8 @@
 
 <% for configuration in @configurations %>
   <tr>
-    <td><%=h configuration.name %></td>
-    <td><%=h configuration.user %></td>
-    <td><%= link_to 'Show', configuration %></td>
-    <td><%= link_to 'Edit', edit_configuration_path(configuration) %></td>
-    <td><%= link_to 'Destroy', configuration, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_name configuration %></td>
+    <td><%= link_to_name configuration.user %></td>
   </tr>
 <% end %>
 </table>

@@ -1,6 +1,5 @@
 <p>
-  <b>Song:</b>
-  <%=h @performance.song %>
+  <%= link_to_name @performance.song %>
 </p>
 
 <p>
@@ -10,12 +9,7 @@
 
 <p>
   <b>Show:</b>
-  <%=h @performance.show %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @performance.user %>
+  <%= link_to_name @performance.show %>
 </p>
 
 

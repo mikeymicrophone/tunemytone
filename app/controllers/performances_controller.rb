@@ -24,7 +24,7 @@ class PerformancesController < ApplicationController
   # GET /performances/new
   # GET /performances/new.xml
   def new
-    @performance = Performance.new
+    @performance = Performance.new params[:performance]
 
     respond_to do |format|
       format.html # new.html.erb

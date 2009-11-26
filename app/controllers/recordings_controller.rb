@@ -24,7 +24,7 @@ class RecordingsController < ApplicationController
   # GET /recordings/new
   # GET /recordings/new.xml
   def new
-    @recording = Recording.new
+    @recording = Recording.new params[:recording]
 
     respond_to do |format|
       format.html # new.html.erb

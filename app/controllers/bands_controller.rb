@@ -16,7 +16,7 @@ class BandsController < ApplicationController
   end
 
   def new
-    @band = Band.new
+    @band = Band.new params[:band]
 
     respond_to do |format|
       format.html

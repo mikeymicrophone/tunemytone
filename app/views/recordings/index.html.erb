@@ -11,10 +11,7 @@
   <tr>
     <td><%=h recording.name %></td>
     <td><%=h recording.excerpt %></td>
-    <td><%=h recording.user %></td>
     <td><%= link_to 'Show', recording %></td>
-    <td><%= link_to 'Edit', edit_recording_path(recording) %></td>
-    <td><%= link_to 'Destroy', recording, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

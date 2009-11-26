@@ -24,7 +24,7 @@ class SoundsController < ApplicationController
   # GET /sounds/new
   # GET /sounds/new.xml
   def new
-    @sound = Sound.new
+    @sound = Sound.new params[:sound]
 
     respond_to do |format|
       format.html # new.html.erb

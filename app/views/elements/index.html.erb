@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Specification type</th>
     <th>Specification</th>
     <th>Configuration</th>
     <th>User</th>
@@ -10,13 +9,10 @@
 
 <% for element in @elements %>
   <tr>
-    <td><%=h element.specification_type %></td>
-    <td><%=h element.specification_id %></td>
-    <td><%=h element.configuration %></td>
-    <td><%=h element.user %></td>
+    <td><%= link_to_name element.specification %></td>
+    <td><%= link_to_name element.configuration %></td>
+    <td><%= link_to_name element.user %></td>
     <td><%= link_to 'Show', element %></td>
-    <td><%= link_to 'Edit', edit_element_path(element) %></td>
-    <td><%= link_to 'Destroy', element, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

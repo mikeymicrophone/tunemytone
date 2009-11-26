@@ -24,7 +24,7 @@ class ConnectionsController < ApplicationController
   # GET /connections/new
   # GET /connections/new.xml
   def new
-    @connection = Connection.new
+    @connection = Connection.new params[:connection]
 
     respond_to do |format|
       format.html # new.html.erb

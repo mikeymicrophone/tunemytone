@@ -3,20 +3,14 @@
 <table>
   <tr>
     <th>Artist</th>
-    <th>Duration type</th>
     <th>Duration</th>
-    <th>User</th>
   </tr>
 
 <% for participation in @participations %>
   <tr>
     <td><%=h participation.artist %></td>
-    <td><%=h participation.duration_type %></td>
-    <td><%=h participation.duration_id %></td>
-    <td><%=h participation.user %></td>
+    <td><%= link_to_name participation.duration %></td>
     <td><%= link_to 'Show', participation %></td>
-    <td><%= link_to 'Edit', edit_participation_path(participation) %></td>
-    <td><%= link_to 'Destroy', participation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

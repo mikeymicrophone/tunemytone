@@ -3,20 +3,14 @@
 <table>
   <tr>
     <th>Configuration</th>
-    <th>Example type</th>
     <th>Example</th>
-    <th>User</th>
   </tr>
 
 <% for sound in @sounds %>
   <tr>
-    <td><%=h sound.configuration %></td>
-    <td><%=h sound.example_type %></td>
-    <td><%=h sound.example_id %></td>
-    <td><%=h sound.user %></td>
+    <td><%= link_to_name sound.configuration %></td>
+    <td><%= link_to_name sound.example %></td>
     <td><%= link_to 'Show', sound %></td>
-    <td><%= link_to 'Edit', edit_sound_path(sound) %></td>
-    <td><%= link_to 'Destroy', sound, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -24,7 +24,7 @@ class ConfigurationsController < ApplicationController
   # GET /configurations/new
   # GET /configurations/new.xml
   def new
-    @configuration = Configuration.new
+    @configuration = Configuration.new params[:configuration]
 
     respond_to do |format|
       format.html # new.html.erb

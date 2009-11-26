@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   # GET /songs/new
   # GET /songs/new.xml
   def new
-    @song = Song.new
+    @song = Song.new params[:song]
 
     respond_to do |format|
       format.html # new.html.erb

@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :venues, :has_many => [:shows]
 
-  map.resources :shows, :has_many => [:sounds, :participations]
+  map.resources :shows, :has_many => [:sounds, :participations, :performances, :songs]
 
   map.resources :excerpts, :has_many => [:sounds]
 
