@@ -3,21 +3,22 @@
 <% form_for(@performance) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :song %><br />
-    <%= f.text_field :song %>
-  </p>
+  <% unless @performance.song %>
+    <p>
+      <%= f.label :song %><br />
+      <%= f.select :song_id, Song.map_name_and_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :song_id %>
+    <%= "of #{@performance.song.name}" %>
+  <% end %>
   <p>
     <%= f.label :performed_at %><br />
     <%= f.datetime_select :performed_at %>
   </p>
   <p>
     <%= f.label :show %><br />
-    <%= f.text_field :show %>
-  </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.select :show_id, Show.map_name_and_id %>
   </p>
   <p>
     <%= f.submit "Create" %>

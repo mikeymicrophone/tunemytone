@@ -1,23 +1,8 @@
-<p>
-  <b>Host type:</b>
-  <%=h @output.host_type %>
-</p>
+<b>Host:<%= link_to_name @output.host %></b>
 
 <p>
-  <b>Host:</b>
-  <%=h @output.host_id %>
-</p>
-
-<p>
-  <b>Description:</b>
   <%=h @output.description %>
 </p>
-
-<p>
-  <b>User:</b>
-  <%=h @output.user %>
-</p>
-
 
 <%= link_to 'Edit', edit_output_path(@output) %> |
 <%= link_to 'Back', outputs_path %>

@@ -1,20 +1,12 @@
-<h1>Listing brands</h1>
+<h1>List of brands</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Homepage</th>
-    <th>User</th>
-  </tr>
 
 <% for brand in @brands %>
   <tr>
     <td><%=h brand.name %></td>
     <td><%=h brand.homepage %></td>
-    <td><%=h brand.user %></td>
     <td><%= link_to 'Show', brand %></td>
-    <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-    <td><%= link_to 'Destroy', brand, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

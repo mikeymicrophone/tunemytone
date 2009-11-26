@@ -1,16 +1,11 @@
 <p>
   <b>Venue:</b>
-  <%=h @show.venue %>
-</p>
-
-<p>
-  <b>Performer type:</b>
-  <%=h @show.performer_type %>
+  <%= link_to_name @show.venue %>
 </p>
 
 <p>
   <b>Performer:</b>
-  <%=h @show.performer_id %>
+  <%= link_to_name @show.performer %>
 </p>
 
 <p>

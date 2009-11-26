@@ -24,7 +24,7 @@ class OutputsController < ApplicationController
   # GET /outputs/new
   # GET /outputs/new.xml
   def new
-    @output = Output.new
+    @output = Output.new params[:output]
 
     respond_to do |format|
       format.html # new.html.erb

@@ -1,16 +1,14 @@
 <p>
-  <b>Output:</b>
-  <%=h @connection.output %>
+  <b>[output]</b>
+  <%= link_to_name @connection.output %>
+  is connected to 
+  <b>[input]</b>
+  <%= link_to_name @connection.input %>
 </p>
 
 <p>
-  <b>Input:</b>
-  <%=h @connection.input %>
-</p>
 
-<p>
-  <b>User:</b>
-  <%=h @connection.user %>
+  <%= link_to_name @connection.user %>
 </p>
 
 

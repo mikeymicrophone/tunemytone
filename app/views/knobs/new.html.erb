@@ -3,20 +3,26 @@
 <% form_for(@knob) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :host_type %><br />
-    <%= f.text_field :host_type %>
-  </p>
-  <p>
-    <%= f.label :host_id %><br />
-    <%= f.text_field :host_id %>
-  </p>
+  <% unless @knob.host %>
+    <p>
+      <%= f.label :host_type %><br />
+      <%= f.text_field :host_type %>
+    </p>
+    <p>
+      <%= f.label :host_id %><br />
+      <%= f.text_field :host_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :host_id %>
+    <%= f.hidden_field :host_type %>
+    <%= "for: #{@knob.host.name}" %>
+  <% end %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :discrete %><br />
+    <%= f.label :discrete, "How many settings does it have? (0 for infinite/continuous)" %><br />
     <%= f.text_field :discrete %>
   </p>
   <p>

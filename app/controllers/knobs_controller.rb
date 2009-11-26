@@ -24,7 +24,7 @@ class KnobsController < ApplicationController
   # GET /knobs/new
   # GET /knobs/new.xml
   def new
-    @knob = Knob.new
+    @knob = Knob.new params[:knob]
 
     respond_to do |format|
       format.html # new.html.erb

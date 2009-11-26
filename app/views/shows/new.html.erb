@@ -7,7 +7,7 @@
 
   <p>
     <%= f.label :venue %><br />
-    <%= f.select :venue, Venue.map_name_and_id %>
+    <%= f.select :venue_id, Venue.map_name_and_id %>
   </p>
   <% unless @show.performer %>
     <p>
@@ -18,6 +18,9 @@
       <%= f.label :performer_id %><br />
       <%= f.text_field :performer_id %>
     </p>
+  <% else %>
+    <%= f.hidden_field :performer_id %>
+    <%= f.hidden_field :performer_type %>
   <% end %>
   <p>
     <%= f.label :performed_at %><br />

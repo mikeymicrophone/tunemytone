@@ -8,11 +8,10 @@
   <%=h @brand.homepage %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%=h @brand.user %>
-</p>
+<% @brand.instruments.each do |i| %>
+  <%= link_to_name i %><br>
+<% end %>
 
+<%= link_to 'new instrument', new_instrument_path(:instrument => {:brand_id => @brand.id}) %>
 
-<%= link_to 'Edit', edit_brand_path(@brand) %> |
-<%= link_to 'Back', brands_path %>
+<%= link_to 'Edit', edit_brand_path(@brand) %>

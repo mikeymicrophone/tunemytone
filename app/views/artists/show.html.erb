@@ -2,5 +2,9 @@
   <%=h @artist.name %>
 </p>
 
+<%= scoped_collection_link 'album', @artist %>
 <%= scoped_new_link 'album' %>
+<br>
+<%= scoped_collection_link 'show', @artist %>
+
 <%= scoped_new_link 'show' %>

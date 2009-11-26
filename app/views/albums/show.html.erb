@@ -1,26 +1,15 @@
 <p>
-  <b>Name:</b>
-  <%=h @album.name %>
-</p>
-
-<p>
-  <b>Performer type:</b>
-  <%=h @album.performer_type %>
+  <h2><%=h @album.name %></h2>
 </p>
 
 <p>
   <b>Performer:</b>
-  <%=h @album.performer_id %>
+  <%= link_to_name @album.performer %>
 </p>
 
 <p>
   <b>Released on:</b>
   <%=h @album.released_on %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @album.user %>
 </p>
 
 

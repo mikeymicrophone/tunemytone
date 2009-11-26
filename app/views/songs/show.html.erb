@@ -1,3 +1,13 @@
 <%=h @song.name %>
 
-<%= link_to 'mention sound' %>
+<% @song.performances.each do |p| %>
+  <%= link_to_name @song.performance %><br>
+<% end %>
+<br>
+<%= link_to 'add performance', new_performance_path(:performance => {:song_id => @song.id}) %><br>
+
+<% @song.sounds.each do |s| %>
+  <%= link_to_name @song.sound %><br>
+<% end %>
+
+<%= link_to 'mention sound', new_sound_path(:sound => {:example_type => 'Song', :example_id => @song.id}) %><br>

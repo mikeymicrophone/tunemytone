@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
   has_many :songs
   has_many :sounds
   has_many :venues
+  
+  def name
+    login
+  end
 end

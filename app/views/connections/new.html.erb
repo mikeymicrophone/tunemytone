@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :input_id %><br />
-    <%= f.text_field :input_id, Input.map_name_and_id %>
+    <%= f.select :input_id, Input.map_name_and_id %>
   </p>
   <p>
     <%= f.submit :connect %>

@@ -1,18 +1,30 @@
 <p>
-  <b>Name:</b>
-  <%=h @instrument.name %>
+  <b><%=h @instrument.name %></b>
 </p>
 
 <p>
   <b>Brand:</b>
-  <%=h @instrument.brand_id %>
+  <%=h @instrument.brand.andand.name %>
 </p>
+outputs:<br>
+<% @instrument.outputs.each do |o| %>
+  <%= link_to_name o %><br>
+<% end %>
 
-<p>
-  <b>User:</b>
-  <%=h @instrument.user_id %>
-</p>
+<%= link_to 'new output', new_output_path(:output => {:host_type => 'Instrument', :host_id => @instrument.id}) %><br>
+knobs:<br>
+<% @instrument.knobs.each do |k| %>
+  <%= link_to_name k %><br>
+<% end %>
+<%= link_to 'new knob', new_knob_path(:knob => {:host_type => 'Instrument', :host_id => @instrument.id}) %>
 
+inputs:<br>
+<% @instrument.inputs.each do |o| %>
+  <%= link_to_name o %><br>
+<% end %>
 
+<%= link_to 'new input', new_input_path(:input => {:host_type => 'Instrument', :host_id => @instrument.id}) %><br>
+
+<br>
 <%= link_to 'Edit', edit_instrument_path(@instrument) %> |
 <%= link_to 'Back', instruments_path %>

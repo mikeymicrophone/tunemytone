@@ -24,7 +24,7 @@ class InstrumentsController < ApplicationController
   # GET /instruments/new
   # GET /instruments/new.xml
   def new
-    @instrument = Instrument.new
+    @instrument = Instrument.new params[:instrument]
 
     respond_to do |format|
       format.html # new.html.erb

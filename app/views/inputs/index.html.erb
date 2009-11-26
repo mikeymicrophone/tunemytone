@@ -1,22 +1,15 @@
-<h1>Listing inputs</h1>
+<h1>inputs</h1>
 
 <table>
   <tr>
-    <th>Host type</th>
     <th>Host</th>
     <th>Description</th>
-    <th>User</th>
   </tr>
 
 <% for input in @inputs %>
   <tr>
-    <td><%=h input.host_type %></td>
-    <td><%=h input.host_id %></td>
-    <td><%=h input.description %></td>
-    <td><%=h input.user %></td>
-    <td><%= link_to 'Show', input %></td>
-    <td><%= link_to 'Edit', edit_input_path(input) %></td>
-    <td><%= link_to 'Destroy', input, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_name input.host %></td>
+    <td><%= link_to input.description, input %></td>
   </tr>
 <% end %>
 </table>

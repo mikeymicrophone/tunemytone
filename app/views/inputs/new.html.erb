@@ -3,14 +3,20 @@
 <% form_for(@input) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :host_type %><br />
-    <%= f.text_field :host_type %>
-  </p>
-  <p>
-    <%= f.label :host_id %><br />
-    <%= f.text_field :host_id %>
-  </p>
+  <% unless @input.host %>
+    <p>
+      <%= f.label :host_type %><br />
+      <%= f.text_field :host_type %>
+    </p>
+    <p>
+      <%= f.label :host_id %><br />
+      <%= f.text_field :host_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :host_id %>
+    <%= f.hidden_field :host_type %>
+    <%= "for: #{@input.host.name}" %>
+  <% end %>
   <p>
     <%= f.label :description %><br />
     <%= f.text_field :description %>

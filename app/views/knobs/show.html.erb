@@ -1,26 +1,14 @@
 <p>
-  <b>Host type:</b>
-  <%=h @knob.host_type %>
+  <b>Host:<%= link_to_name @knob.host %></b>
 </p>
 
 <p>
-  <b>Host:</b>
-  <%=h @knob.host_id %>
-</p>
-
-<p>
-  <b>Name:</b>
   <%=h @knob.name %>
 </p>
 
 <p>
-  <b>Discrete:</b>
+  <b>Number of discrete settings:</b>
   <%=h @knob.discrete %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @knob.user %>
 </p>
 
 

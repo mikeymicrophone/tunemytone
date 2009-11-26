@@ -1,18 +1,10 @@
-<h1>Listing songs</h1>
+<h1>songs</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>User</th>
-  </tr>
 
 <% for song in @songs %>
   <tr>
-    <td><%=h song.name %></td>
-    <td><%=h song.user %></td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_name song %></td>
   </tr>
 <% end %>
 </table>

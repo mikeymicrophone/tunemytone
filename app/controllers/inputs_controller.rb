@@ -24,7 +24,7 @@ class InputsController < ApplicationController
   # GET /inputs/new
   # GET /inputs/new.xml
   def new
-    @input = Input.new
+    @input = Input.new params[:input]
 
     respond_to do |format|
       format.html # new.html.erb

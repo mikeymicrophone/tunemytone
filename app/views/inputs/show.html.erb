@@ -1,23 +1,12 @@
 <p>
-  <b>Host type:</b>
-  <%=h @input.host_type %>
-</p>
-
-<p>
   <b>Host:</b>
-  <%=h @input.host_id %>
+  <%= link_to_name @input.host %>
 </p>
 
 <p>
   <b>Description:</b>
   <%=h @input.description %>
 </p>
-
-<p>
-  <b>User:</b>
-  <%=h @input.user %>
-</p>
-
 
 <%= link_to 'Edit', edit_input_path(@input) %> |
 <%= link_to 'Back', inputs_path %>
