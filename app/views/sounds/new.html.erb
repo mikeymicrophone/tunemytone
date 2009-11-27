@@ -9,7 +9,7 @@
 
   <p>
     <%= f.label :configuration %><br />
-    <%= f.select :configuration, Configuration.map_name_and_id %>
+    <%= f.select :configuration_id, Configuration.map_name_and_id %>
   </p>
   <% unless @sound.example %>
     <p>

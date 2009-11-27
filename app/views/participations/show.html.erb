@@ -1,21 +1,9 @@
 <p>
-  <b>Artist:</b>
-  <%=h @participation.artist %>
+  <%= link_to_name @participation.artist %>
 </p>
 
 <p>
-  <b>Duration type:</b>
-  <%=h @participation.duration_type %>
-</p>
-
-<p>
-  <b>Duration:</b>
-  <%=h @participation.duration_id %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @participation.user %>
+  <%=h @participation.duration.name %>
 </p>
 
 

@@ -8,7 +8,7 @@
 
 <% for participation in @participations %>
   <tr>
-    <td><%=h participation.artist %></td>
+    <td><%= link_to_name participation.artist %></td>
     <td><%= link_to_name participation.duration %></td>
     <td><%= link_to 'Show', participation %></td>
   </tr>

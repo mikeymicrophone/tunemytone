@@ -5,20 +5,22 @@
 
   <p>
     <%= f.label :artist %><br />
-    <%= f.text_field :artist %>
+    <%= f.select :artist_id, Artist.map_name_and_id %>
   </p>
-  <p>
-    <%= f.label :duration_type %><br />
-    <%= f.text_field :duration_type %>
-  </p>
-  <p>
-    <%= f.label :duration_id %><br />
-    <%= f.text_field :duration_id %>
-  </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
+  <% unless @participation.duration %>
+    <p>
+      <%= f.label :duration_type %><br />
+      <%= f.text_field :duration_type %>
+    </p>
+    <p>
+      <%= f.label :duration_id %><br />
+      <%= f.text_field :duration_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :duration_id %>
+    <%= f.hidden_field :duration_type %>
+    <%= "in #{@participation.duration.name}" %>
+  <% end %>
   <p>
     <%= f.submit "Create" %>
   </p>

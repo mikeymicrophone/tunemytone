@@ -2,5 +2,11 @@
   <%=h @band.name %>
 </p>
 
+<%= scoped_collection_link 'album', @band %>
 <%= scoped_new_link 'album' %>
+<%= scoped_collection_link 'show', @band %>
 <%= scoped_new_link 'show' %>
+<%= scoped_collection_link 'sound', @band %>
+<%= scoped_new_link 'sound' %>
+<%= scoped_collection_link 'participation', @band %>
+<%= scoped_new_link 'participation' %>

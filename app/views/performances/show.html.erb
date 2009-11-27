@@ -12,6 +12,11 @@
   <%= link_to_name @performance.show %>
 </p>
 
+<%= scoped_collection_link 'sound', @performance %>
+<%= scoped_new_link 'sound' %>
+<%= scoped_collection_link 'participation', @performance %>
+<%= scoped_new_link 'participation' %>
+
 
 <%= link_to 'Edit', edit_performance_path(@performance) %> |
 <%= link_to 'Back', performances_path %>
