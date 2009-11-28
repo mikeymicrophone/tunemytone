@@ -1,21 +1,10 @@
 <p>
-  <b>Specification type:</b>
-  <%=h @element.specification_type %>
-</p>
-
-<p>
-  <b>Specification:</b>
-  <%=h @element.specification_id %>
+  <%= link_to_name @element.specification %>
 </p>
 
 <p>
   <b>Configuration:</b>
-  <%=h @element.configuration %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @element.user %>
+  <%= link_to_name @element.configuration %>
 </p>
 
 

@@ -3,14 +3,20 @@
 <% form_for(@element) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :specification_type %><br />
-    <%= f.text_field :specification_type %>
-  </p>
-  <p>
-    <%= f.label :specification_id %><br />
-    <%= f.text_field :specification_id %>
-  </p>
+  <% unless @element.specification %>
+    <p>
+      <%= f.label :specification_type %><br />
+      <%= f.text_field :specification_type %>
+    </p>
+    <p>
+      <%= f.label :specification_id %><br />
+      <%= f.text_field :specification_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :specification_id %>
+    <%= f.hidden_field :specification_type %>
+    <%= link_to_name @element.specification %>
+  <% end %>
   <p>
     <%= f.label :configuration_id %><br />
     <%= f.select :configuration_id, Configuration.map_name_and_id %>

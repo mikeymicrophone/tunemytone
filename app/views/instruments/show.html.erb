@@ -6,6 +6,12 @@
   <b>Brand:</b>
   <%=h @instrument.brand.andand.name %>
 </p>
+
+
+connected to:<br>
+<% @devices.each_with_index do |d, i| %>
+  <%= link_to_name d %> <%= link_to 'add to configuration', new_element_path(:element => {:specification_type => 'Connection', :specification_id => @connections[i].id}) %><br>
+<% end %>
 outputs:<br>
 <% @instrument.outputs.each do |o| %>
   <%= link_to_name o %><br>
@@ -17,7 +23,7 @@ knobs:<br>
   <%= link_to_name k %><br>
 <% end %>
 <%= link_to 'new knob', new_knob_path(:knob => {:host_type => 'Instrument', :host_id => @instrument.id}) %>
-
+<br>
 inputs:<br>
 <% @instrument.inputs.each do |o| %>
   <%= link_to_name o %><br>

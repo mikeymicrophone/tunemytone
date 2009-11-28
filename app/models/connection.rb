@@ -12,4 +12,8 @@ class Connection < ActiveRecord::Base
   def sink
     input.host
   end
+  
+  def name
+    source.name + ' to ' + sink.name
+  end
 end

@@ -14,6 +14,8 @@ class InstrumentsController < ApplicationController
   # GET /instruments/1.xml
   def show
     @instrument = Instrument.find(params[:id])
+    @connections = @instrument.connections
+    @devices = @instrument.connected_devices
 
     respond_to do |format|
       format.html # show.html.erb
