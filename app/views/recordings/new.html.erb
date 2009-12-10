@@ -1,7 +1,11 @@
 <h1>New recording</h1>
 
-<% form_for(@recording) do |f| %>
+<% form_for(@recording, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
+
+  <p>
+    <%= f.file_field :audio %>
+  </p>
 
   <p>
     <%= f.label :name %><br />
@@ -9,7 +13,7 @@
   </p>
   <p>
     <%= f.label :excerpt %><br />
-    <%= f.select :excerpt, Excerpt.map_name_and_id %>
+    <%= f.select :excerpt_id, Excerpt.map_name_and_id %>
   </p>
   <p>
     <%= f.submit "Create" %>
