@@ -9,11 +9,7 @@
   </p>
   <p>
     <%= f.label :excerpt %><br />
-    <%= f.text_field :excerpt %>
-  </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.select :excerpt, Excerpt.map_name_and_id %>
   </p>
   <p>
     <%= f.submit "Create" %>

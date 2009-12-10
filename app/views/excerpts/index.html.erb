@@ -1,18 +1,11 @@
 <h1>Listing excerpts</h1>
 
 <table>
-  <tr>
-    <th>Context</th>
-    <th>Description</th>
-    <th>User</th>
-  </tr>
 
 <% for excerpt in @excerpts %>
   <tr>
-    <td><%=h excerpt.context %></td>
-    <td><%=h excerpt.description %></td>
-    <td><%= link_to_name excerpt.user %></td>
-    <td><%= link_to 'Show', excerpt %></td>
+    <td><%= link_to_name excerpt.context %></td>
+    <td><%= link_to excerpt.description, excerpt %></td>
   </tr>
 <% end %>
 </table>

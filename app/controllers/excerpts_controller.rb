@@ -2,7 +2,11 @@ class ExcerptsController < ApplicationController
   # GET /excerpts
   # GET /excerpts.xml
   def index
-    @excerpts = Excerpt.find(:all)
+    @excerpts = if params[:song_id]
+      Song.find(params[:song_id]).excerpts
+    else
+      Excerpt.find(:all)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

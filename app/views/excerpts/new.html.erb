@@ -1,23 +1,28 @@
-<h1>New excerpt</h1>
+<h1>New excerpt
+  <% if @excerpt.context %>
+    <%= " of #{@excerpt.context.name}" %>
+  <% end %>  
+</h1>
 
 <% form_for(@excerpt) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :context_type %><br />
-    <%= f.text_field :context_type %>
-  </p>
-  <p>
-    <%= f.label :context_id %><br />
-    <%= f.text_field :context_id %>
-  </p>
+  <% unless @excerpt.context %>
+    <p>
+      <%= f.label :context_type %><br />
+      <%= f.text_field :context_type %>
+    </p>
+    <p>
+      <%= f.label :context_id %><br />
+      <%= f.text_field :context_id %>
+    </p>
+  <% else %>
+    <%= f.hidden_field :context_id %>
+    <%= f.hidden_field :context_type %>
+  <% end %>
   <p>
     <%= f.label :description %><br />
     <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
   </p>
   <p>
     <%= f.submit "Create" %>

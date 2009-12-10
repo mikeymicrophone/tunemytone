@@ -12,3 +12,6 @@
 <% end %>
 
 <%= link_to 'mention sound', new_sound_path(:sound => {:example_type => 'Song', :example_id => @song.id}) %><br>
+
+<%= scoped_new_link 'excerpt' %>
+<%= scoped_collection_link 'excerpt', @song %>
