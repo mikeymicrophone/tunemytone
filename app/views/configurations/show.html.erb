@@ -4,8 +4,8 @@
 </p>
 
 <% @configuration.elements.each do |e| %>
-  <%= link_to 'this', e %>
-<% end %>
+  <%= link_to_name e %><br>
+<% end %><br>
 <%= scoped_new_link 'element' %>
 <br>
 <%= link_to 'Edit', edit_configuration_path(@configuration) %> |

@@ -1,17 +1,13 @@
 <p>
-  <b>Name:</b>
-  <%=h @effect.name %>
+  <%= link_to_name @effect.brand %>  <%=h @effect.name %>
 </p>
 
-<p>
-  <b>Brand:</b>
-  <%=h @effect.brand %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @effect.user %>
-</p>
+<%= scoped_new_link 'input' %><br>
+<%= scoped_new_link 'output' %><br>
+<%= scoped_new_link 'knob' %><br>
+<%= scoped_collection_link 'input', @effect %><br>
+<%= scoped_collection_link 'output', @effect %><br>
+<%= scoped_collection_link 'knob', @effect %><br>
 
 
 <%= link_to 'Edit', edit_effect_path(@effect) %> |

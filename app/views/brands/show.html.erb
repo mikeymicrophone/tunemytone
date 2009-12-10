@@ -12,6 +12,9 @@
   <%= link_to_name i %><br>
 <% end %>
 
-<%= link_to 'new instrument', new_instrument_path(:instrument => {:brand_id => @brand.id}) %>
+<%= scoped_new_link 'instrument' %><br>
+<%= scoped_new_link 'effect' %><br>
+<%= scoped_collection_link 'instrument', @brand %><br>
+<%= scoped_collection_link 'effect', @brand %><br>
 
 <%= link_to 'Edit', edit_brand_path(@brand) %>

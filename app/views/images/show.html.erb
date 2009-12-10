@@ -1,13 +1,8 @@
 <p>
-  <b>Name:</b>
   <%=h @image.name %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%=h @image.user %>
-</p>
-
+<%= image_tag @image.photo.url %>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
